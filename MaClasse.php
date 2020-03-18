@@ -3,26 +3,34 @@
 
 class MaClasse
 {
-//    private     $unAttributPrive ;
-//    public function __set($name, $value)
-//    {
-//        echo "lattribut est <strong>",$name,"</strong> et la valeur est :  <strong>",$value," </strong><br>";
-//    }
-    private $tab=[];
+    private $unAttributPrive;
+    private $TabAttribut=[];
 
+    //https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/1666950-les-methodes-magiques#/id/r-1670134
     public function __set($name, $value)
     {
-        $this->tab[$name]=$value;
+        //echo "lattribut est <strong>", $name, "</strong> et la valeur est :  <strong>", $value, " </strong><br>";
+        $this->TabAttribut[$name]=$value;
+    }
+    public function afficher()
+    {
+        echo '<pre>', print_r($this->TabAttribut) ,'</pre>';
     }
 
-    public function afficherAttribut()
+    //https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/1666950-les-methodes-magiques#/id/r-1670145
+    public  function __get($name)
     {
-        echo '<pre>',print_r($this->tab),'</pre>';
+        return "Impossible dacceder a lattribut <strong> $name </strong> ,desole !<br/>";
     }
 
 }
-$obj=new MaClasse();
-$obj->attribut='Simple test';
-$obj->unAttributPrive='Autre simple test';
+$set= new MaClasse();
 
-$obj->afficherAttribut();
+$set ->attribut='Simple test';
+$set->unAttributPrive = 'Autre simple test';
+$set->afficher();
+
+$get=new MaClasse;
+
+echo $get->attribut;
+echo $get->unAttributPrive;
