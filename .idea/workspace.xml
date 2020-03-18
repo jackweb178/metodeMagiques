@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11ef252e-0eea-455f-ba03-dca85c96c763" name="Default Changelist" comment="" />
+    <list default="true" id="11ef252e-0eea-455f-ba03-dca85c96c763" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaClasse.php" beforeDir="false" afterPath="$PROJECT_DIR$/MaClasse.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +18,11 @@
   <component name="FavoritesManager">
     <favorites_list name="methodeMagique" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Z8fQq2TaYFSfhro3oECol1CL3C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -44,6 +51,9 @@
       <updated>1584225629107</updated>
       <workItem from="1584225631005" duration="3753000" />
       <workItem from="1584525766018" duration="705000" />
+      <workItem from="1584532557636" duration="1649000" />
+      <workItem from="1584538398807" duration="27000" />
+      <workItem from="1584538472056" duration="3551000" />
     </task>
     <servers />
   </component>
@@ -55,9 +65,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="834" y="181" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1584353632822" />
-    <state x="720" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584525872547">
+    <state x="872" y="283" key="VCS.ChangelistChooser" timestamp="1584535907641">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="720" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584525872547" />
+    <state x="872" y="283" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1584535907641" />
+    <state x="720" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584538479713">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="720" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584538479713" />
+    <state x="680" y="164" key="run.anything.popup" timestamp="1584541885887">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="680" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584541885887" />
   </component>
 </project>
