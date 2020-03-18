@@ -28,6 +28,12 @@ class MaClasse
         echo '<pre>', print_r($this->TabAttribut,true) ,'</pre>';
 
     }
+
+    //https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/1666950-les-methodes-magiques#/id/r-1670170
+    public function __isset($name)
+    {
+        return isset($this->TabAttribut[$name]);
+    }
 }
 $set= new MaClasse();
 
@@ -38,3 +44,17 @@ $set->afficher();
 echo $set->attribut;
 echo $set->autreAttribut;
 
+//__isset()
+if (isset($set->attribut)) {
+    echo "<br/>L'attribut <strong> attribut</strong> existe ";
+}else
+{
+    echo "<br/>L'attribut <stron> attribut </strong> n'existe pas ";
+}
+
+if (isset($set->autreAttribut)) {
+    echo "<br/>L'attribut <strong> unAttributPrive</strong> existe ";
+}else
+{
+    echo "<br/>L'attribut <strong> unAttributPrive </strong> n'existe pas ";
+}
