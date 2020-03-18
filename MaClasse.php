@@ -34,6 +34,16 @@ class MaClasse
     {
         return isset($this->TabAttribut[$name]);
     }
+
+    //https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/1666950-les-methodes-magiques#/id/r-1670164
+
+    public function __unset($name)
+    {
+        if (isset($this->TabAttribut[$name])) 
+        {
+            unset($this->TabAttribut[$name]);
+        }
+    }
 }
 $set= new MaClasse();
 
@@ -50,6 +60,15 @@ if (isset($set->attribut)) {
 }else
 {
     echo "<br/>L'attribut <stron> attribut </strong> n'existe pas ";
+}
+
+//__unset()
+unset($set->attribut);
+if (isset($set->attribut)) {
+    echo "<br/>L'attribut <strong> attribut</strong> existe ";
+}else
+{
+    echo "<br/>L'attribut <strong> attribut </strong> n'existe pas ";
 }
 
 if (isset($set->autreAttribut)) {
