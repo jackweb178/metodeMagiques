@@ -3,77 +3,11 @@
 
 class MaClasse
 {
-    private $unAttributPrive;
-    private $TabAttribut=[];
-
-    //https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/1666950-les-methodes-magiques#/id/r-1670145
-    public  function __get($name)
+    //https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/1666950-les-methodes-magiques#/id/r-1670186
+    public function __call($name, $arguments)
     {
-        if (isset($this->TabAttribut[$name]))
-        {
-            return $this->TabAttribut[$name];
-        }else
-        {
-            echo '<br/>==', $name,"== Cet attribut n'existe pas ";
-        }
-    }
-
-    //https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/1666950-les-methodes-magiques#/id/r-1670134
-    public function __set($name, $value)
-    {
-        $this->TabAttribut[$name]=$value;
-    }
-    public function afficher()
-    {
-        echo '<pre>', print_r($this->TabAttribut,true) ,'</pre>';
-
-    }
-
-    //https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/1666950-les-methodes-magiques#/id/r-1670170
-    public function __isset($name)
-    {
-        return isset($this->TabAttribut[$name]);
-    }
-
-    //https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/1666950-les-methodes-magiques#/id/r-1670164
-
-    public function __unset($name)
-    {
-        if (isset($this->TabAttribut[$name])) 
-        {
-            unset($this->TabAttribut[$name]);
-        }
+        echo 'La methode <strong>',$name,'</strong> a ete appele alors quelle nexiste pas et ces argument sont : <strong>',implode($arguments,'</strong>,<strong>'),'</strong>';
     }
 }
-$set= new MaClasse();
-
-$set ->attribut='Simple test';
-$set->unAttributPrive = 'Autre simple test';
-$set->afficher();
-
-echo $set->attribut;
-echo $set->autreAttribut;
-
-//__isset()
-if (isset($set->attribut)) {
-    echo "<br/>L'attribut <strong> attribut</strong> existe ";
-}else
-{
-    echo "<br/>L'attribut <stron> attribut </strong> n'existe pas ";
-}
-
-//__unset()
-unset($set->attribut);
-if (isset($set->attribut)) {
-    echo "<br/>L'attribut <strong> attribut</strong> existe ";
-}else
-{
-    echo "<br/>L'attribut <strong> attribut </strong> n'existe pas ";
-}
-
-if (isset($set->autreAttribut)) {
-    echo "<br/>L'attribut <strong> unAttributPrive</strong> existe ";
-}else
-{
-    echo "<br/>L'attribut <strong> unAttributPrive </strong> n'existe pas ";
-}
+$obj=new MaClasse();
+$obj->methode(123,'test');
