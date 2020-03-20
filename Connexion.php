@@ -8,9 +8,8 @@ class Connexion
     /**
      * Connexion constructor.
      */
-    public function __construct($pdo, $serveur, $utilisateur, $motDePass, $dataBase)
+    public function __construct($serveur, $utilisateur, $motDePass, $dataBase)
     {
-        $this->pdo = $pdo;
         $this->serveur = $serveur;
         $this->utilisateur = $utilisateur;
         $this->motDePass = $motDePass;
@@ -26,5 +25,17 @@ class Connexion
     {
         return ['serveur','utilisateur','motDePass','dataBase'];
     }
-
+    public function __wakeup()
+    {
+        $this->connexionBDD();
+    }
 }
+$connexion= new Connexion('localhost','root','','poo');
+//var_dump($connexion);
+$_SESSION['connexion'] = serialize($connexion);
+var_dump($_SESSION['connexion']);echo '<br/>';
+
+// Avec unserialize() on reconvertis lobjet $connexion a son etat dorigine
+$connexion= unserialize($_SESSION['connexion']);
+var_dump($connexion);
+
